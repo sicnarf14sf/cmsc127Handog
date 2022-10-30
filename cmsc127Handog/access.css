@@ -1,0 +1,108 @@
+
+/* LogIn and SignUp Tabs on Access Page */
+.accesstabs{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 500px;
+    margin: 50px auto;
+    background-color: #fefefe;
+  }
+  
+  .accesstabs input[type="radio"]{
+    display: none;
+  }
+  
+  .accesstabs label{
+    width: 50%;
+    padding: 15px;
+    background: #fefefe;
+    font-size: 18px;
+    text-align: center;
+    font-weight: 700;
+    color: #051747;
+  }
+  
+  .accesstabs .tabs{
+    width: 100%;
+    padding: 50px;
+    background:white;
+    color: #051747;
+    line-height: 1.5;
+    font-size: 16px;
+    font-weight: 400;
+    order: 1;
+    display: none;
+  }
+  
+  .accesstabs input[type="radio"]:checked + label + .tabs{
+     display: block;
+     background:white;
+     margin: 0 auto;
+  }
+  
+  .accesstabs input[type="radio"]:checked + label{
+    background:#e7e9f0;
+    
+  }
+  
+  .accesstabs .tabs input[type=email], input[type=password] {
+    background-color: #fefefe;
+    color: #081f62;
+    padding: 15px;
+    margin: auto;
+    display: block;
+    font-size: 16px;
+    border-radius: 5px;
+    border-color: black;
+    border-style: solid;
+  }
+  
+  .accesstabs .tabs input[type=text] {
+    background-color: #fefefe;
+    color: #081f62;
+    padding: 15px;
+    margin: 0 0px 20px 30px;
+    font-size: 16px;
+    border-radius: 5px;
+    border-color: black;
+    border-style: solid;
+  }
+  
+  .accesstabs .tabs input[type=email]::placeholder, input[type=password]::placeholder, input[type=text]::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #535f80;
+    opacity: 1; /* Firefox */
+  }
+  
+  .accesstabs .tabs input[type=email]:-ms-input-placeholder, input[type=password]:-ms-input-placeholder, input[type=text]:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #535f80;
+  }
+  
+  .accesstabs .tabs input[type=email]::-ms-input-placeholder, input[type=password]::-ms-input-placeholder, input[type=text]::-ms-input-placeholder { /* Microsoft Edge */
+    color: #535f80;
+  }
+  
+  .accessbutton{
+    background-color: #081f62;
+    color: #fefefe;
+    font-size: 17px;
+    padding: 10px 40px;
+    border: none;
+    outline: none;
+    display: block;
+    margin: 25px auto;
+  }
+  
+  .accessbutton:hover{
+    background-color: #fefefe;
+    color: #081f62;
+    -webkit-box-shadow:inset 0px 0px 0px 4px #081f62;
+    -moz-box-shadow:inset 0px 0px 0px 4px #081f62;
+    box-shadow:inset 0px 0px 0px 4px #081f62;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+    cursor: pointer;
+  }
+
+body{
+  background-color:#e7e9f0;
+}

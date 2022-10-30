@@ -4,7 +4,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="navbar.css" rel="stylesheet">
         <link href="stylesheet.css" rel="stylesheet">
+        <link href="access.css" rel="stylesheet">
     </head>
+    
     <body>
         <a href="landingpage.html">
             <img src="handoglogo.png" class="centerlogo">
@@ -28,23 +30,24 @@
         <div class="accesstabs">
             <input type="radio" id="login" name="accesstabs" checked="checked">
             <label for="login">Log In</label>
-            <div class="tabs">
-                <input type="email" placeholder="E-mail" name="email" size="30" required><br/>
-                <input type="password" placeholder="Password"
-                name="password" size="30" required>
-                <button class="accessbutton" name="login">Log In</button>
-            </div>
 
-            <input type="radio" id="signup" name="accesstabs">
+                <div class="tabs">
+                    <input type="email" placeholder="E-mail" name="email" size="30" required><br/>
+                    <input type="password" placeholder="Password" name="password" size="30" required>
+
+                    <button class="accessbutton" name="login">Log In</button>
+                </div>
+
+            <input type="radio" id="signup" name="accesstabs" checked="checked">
             <label for="signup">Sign Up</label>
-            <div class="tabs">
-                <input type="text" placeholder="First Name" name="fname" size="10" required>
-                <input type="text" placeholder="Last Name" name="lname" size="10" required>
-                <input type="email" placeholder="E-mail" name="email" size="30" required><br/>
-                <input type="password" placeholder="Password"
-                name="password" size="30" required>
-                <button class="accessbutton" name="signup">Sign Up</button>
-            </div>
+            
+                <div class="tabs">
+                    <input type="text" placeholder="First Name" name="fname" size="10" required>
+                    <input type="text" placeholder="Last Name" name="lname" size="10" required>
+                    <input type="email" placeholder="E-mail" name="email" size="30" required><br/>
+                    <input type="password" placeholder="Password" name="password" size="30" required>
+                    <button class="accessbutton" name="signup">Sign Up</button>
+                </div>
         </div>
 
     </body>
