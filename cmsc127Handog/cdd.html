@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="navbar.css" rel="stylesheet">
+        <link href="cdd.css" rel="stylesheet">
+    </head>
+    <body>
+        <img src="handoglogo.png" class="centerlogo">
+        <div class="topnav">
+
+            <input type="text" placeholder="Search">
+            <a>Discover</a>
+
+            <div class="topnav-centered">
+                <a>Create a Drive</a>
+            </div>
+
+            <div class="topnav-right">
+                <a>Profile</a>
+                <a>Log In/Sign Up</a>
+            </div>
+        </div>
+
+        <div class="cddcontent">
+            <h1><b>Create your Donation Drive</b></h1>
+        </div>
+        <div class="formtabs">
+            <input type="text" placeholder="Donation Drive Name" name="ddname" size="50" required>
+            <form>
+                <select required name = "dropdown" >
+                    <option value = "" disabled selected hidden>Category</option>
+                    <option value = "Education">Education</option>
+                    <option value = "Healthcare">Healthcare</option>
+                    <option value = "Wildlife">Wildlife</option>
+                 </select>
+            </form>
+            <input type="text" placeholder="Description" name="description" size="50" maxwidth="200px" required>
+            <input type="number" placeholder="Donation Drive Goals" name="ddgoals" size="30" required>
+            <br><br><Br>
+            <p1>Upload Photo</p1>
+            <input type="image" placeholder="Donation Image" name="ddimage" size="50" required>>
+            <button class="accessbutton" name="create">Create</button>
+      
+            
+        </div>
+    </body>
+</html>

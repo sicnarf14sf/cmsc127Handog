@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="navbar.css" rel="stylesheet">
+        <link href="stylesheet.css" rel="stylesheet">
+    </head>
+    <body>
+        <img src="handoglogo.png" class="centerlogo">
+        <div class="topnav">
+
+            <input type="text" placeholder="Search">
+            <a>Discover</a>
+
+            <div class="topnav-centered">
+                <a>Create a Drive</a>
+            </div>
+
+            <div class="topnav-right">
+                <a>Profile</a>
+                <a>Log In/Sign Up</a>
+            </div>
+        </div>
+
+        <div class="accesstabs">
+            <input type="radio" id="login" name="accesstabs" checked="checked">
+            <label for="login">Log In</label>
+            <div class="tabs">
+                <input type="email" placeholder="E-mail" name="email" size="30" required><br/>
+                <input type="password" placeholder="Password"
+                name="password" size="30" required>
+                <button class="accessbutton" name="login">Log In</button>
+            </div>
+
+            <input type="radio" id="signup" name="accesstabs">
+            <label for="signup">Sign Up</label>
+            <div class="tabs">
+                <input type="text" placeholder="First Name" name="fname" size="10" required>
+                <input type="text" placeholder="Last Name" name="lname" size="10" required>
+                <input type="email" placeholder="E-mail" name="email" size="30" required><br/>
+                <input type="password" placeholder="Password"
+                name="password" size="30" required>
+                <button class="accessbutton" name="signup">Sign Up</button>
+            </div>
+        </div>
+
+    </body>
+</html>
