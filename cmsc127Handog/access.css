@@ -32,6 +32,7 @@
     font-weight: 400;
     order: 1;
     display: none;
+    text-align: center;
   }
   
   .accesstabs input[type="radio"]:checked + label + .tabs{
@@ -41,7 +42,8 @@
   }
   
   .accesstabs input[type="radio"]:checked + label{
-    background:#e7e9f0;
+    background:#fefefe;
+    box-shadow: inset 0px 0px 10px 10px #bdbdbd; /*selecting effect on the upper tabs*/
     
   }
   
@@ -53,18 +55,21 @@
     display: block;
     font-size: 16px;
     border-radius: 5px;
-    border-color: black;
+    border-color:#515152;
     border-style: solid;
   }
   
   .accesstabs .tabs input[type=text] {
     background-color: #fefefe;
     color: #081f62;
-    padding: 15px;
-    margin: 0 0px 20px 30px;
+    padding: 13px;
+    margin-top: 0; 
+    margin-right: 0px; 
+    margin-bottom: 20px; 
+    margin-left: 0px;
     font-size: 16px;
     border-radius: 5px;
-    border-color: black;
+    border-color:#515152;
     border-style: solid;
   }
   
@@ -90,6 +95,7 @@
     outline: none;
     display: block;
     margin: 25px auto;
+    margin-bottom: 1px;
   }
   
   .accessbutton:hover{
@@ -104,5 +110,12 @@
   }
 
 body{
-  background-color:#e7e9f0;
+  background-color:#e7e9f0;s
 }
+
+.accesstabs .tabs .forgotPass{
+  font-size: 14px;
+  text-decoration: none;
+  color: #081f62;
+}
+
