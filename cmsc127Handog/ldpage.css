@@ -368,3 +368,33 @@ img{
   font-weight: 600;
   margin-left: 725px;
 }
+
+a.createDrive{
+  -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    display:inline;
+    text-decoration: none;
+    color: initial;
+    margin-left: 180px;
+    background-color: #051747;
+    padding: 20px;
+    color: #fefefe;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.contentbox .imgbox .createDriveContainer{
+    padding: 10px;  
+}
+
+.createDrive:hover{
+  background-color: #fefefe;
+    color: #081f62;
+    -webkit-box-shadow:inset 0px 0px 0px 4px #081f62;
+    -moz-box-shadow:inset 0px 0px 0px 4px #081f62;
+    box-shadow:inset 0px 0px 0px 4px #081f62;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+    cursor: pointer;
+}
