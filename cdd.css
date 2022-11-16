@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+.content{
+    padding-top: 30px;
+    margin-left: 100px;
+    margin-right: 200px;
+    font-family: 'Open Sans', sans-serif;
+}
+ /* Main Title */
+.content h1{
+    color: #051747;
+    line-height: 0%;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+ /* Sub Title */
+ .content h2{
+    color: #051747;
+    line-height: 1.3;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+/* For ByLines */
+.content p1{
+    color: #051747;
+    line-height: 1.5;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+/* Paragraph */
+.content p2{
+    color: #051747;
+    line-height: 1.5;
+    font-size: 16px;
+    font-weight: 400;
+    text-indent: 50px;
+}
+
+.button{
+    border: none;
+    color: #fefefe;
+    padding: 10px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    margin: 20px 2px;
+    cursor: pointer;
+    background-color: #081f62;
+}
+
+.button:hover{
+    background-color: #fefefe;
+    color: #081f62;
+    -webkit-box-shadow:inset 0px 0px 0px 4px #081f62;
+    -moz-box-shadow:inset 0px 0px 0px 4px #081f62;
+    box-shadow:inset 0px 0px 0px 4px #081f62;
+}
+
+/* Slideshow styles */
+
+* {box-sizing: border-box}
+body{
+    font-family: 'Open Sans', sans-serif;
+    margin:0;
+    background-color: #fefefe;
+}
+
+.mySlides{
+    display: none
+}
+
+img{
+    vertical-align: middle;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 750px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: #fefefe;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: #051747;
+}
+
+/* Caption text */
+.text {
+  color: #051747;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #051747;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #535f80;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #051747;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+
+/* LogIn and SignUp Tabs on Access Page */
+.accesstabs{
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 25px;
+}
+
+.accesstabs input[type="radio"]{
+  display: none;
+}
+
+.accesstabs label{
+  width: 50%;
+  padding: 15px;
+  background: #fefefe;
+  font-size: 18px;
+  text-align: center;
+  font-weight: 700;
+  color: #051747;
+}
+
+.accesstabs .tabs{
+  width: 100%;
+  padding: 50px;
+  background: #e7e9f0;
+  color: #051747;
+  line-height: 1.5;
+  font-size: 16px;
+  font-weight: 400;
+  order: 1;
+  display: none;
+}
+
+.accesstabs input[type="radio"]:checked + label + .tabs{
+   display: block;
+   margin: 0 auto;
+}
+
+.accesstabs input[type="radio"]:checked + label{
+  background: #e7e9f0;
+  box-shadow: 0 -5px;
+}
+
+.accesstabs .tabs input[type=email], input[type=password] {
+  background-color: #fefefe;
+  color: #081f62;
+  padding: 15px;
+  margin: auto;
+  display: block;
+  font-size: 17px;
+  border: none;
+  outline: none;
+}
+
+.accesstabs .tabs input[type=text] {
+  background-color: #fefefe;
+  color: #081f62;
+  padding: 15px;
+  margin: 0 9px 20px 8px;
+  font-size: 17px;
+  border: none;
+  outline: none;
+}
+
+.accesstabs .tabs input[type=email]::placeholder, input[type=password]::placeholder, input[type=text]::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #535f80;
+  opacity: 1; /* Firefox */
+}
+
+.accesstabs .tabs input[type=email]:-ms-input-placeholder, input[type=password]:-ms-input-placeholder, input[type=text]:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #535f80;
+}
+
+.accesstabs .tabs input[type=email]::-ms-input-placeholder, input[type=password]::-ms-input-placeholder, input[type=text]::-ms-input-placeholder { /* Microsoft Edge */
+  color: #535f80;
+}
+
+.accessbutton{
+  background-color: #081f62;
+  color: #fefefe;
+  font-size: 17px;
+  padding: 10px 40px;
+  border: none;
+  outline: none;
+  display: block;
+  margin: 25px auto;
+}
+
+.accessbutton:hover{
+  background-color: #fefefe;
+  color: #081f62;
+  -webkit-box-shadow:inset 0px 0px 0px 4px #081f62;
+  -moz-box-shadow:inset 0px 0px 0px 4px #081f62;
+  box-shadow:inset 0px 0px 0px 4px #081f62;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+
+/* on creation drive html */
+
+.dropdownbody {
+  font-family: 'Open Sans', sans-serif;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: left;
+  align-items: flex-start;
+  padding: 5rem;
+}
+.dropdown {
+  width: 30rem;
+}
+
+
+.formtabs{
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 25px;
+}
+
+.formtabs label{
+  width: 50%;
+  padding: 15px;
+  background: #fefefe;
+  font-size: 18px;
+  text-align: center;
+  font-weight: 700;
+  color: #051747;
+}
+
+.formtabs .tabs{
+  width: 100%;
+  padding: 50px;
+  background: #e7e9f0;
+  color: #051747;
+  line-height: 1.5;
+  font-size: 16px;
+  font-weight: 400;
+  order: 1;
+  display: none;
+}
+
+.formtabs .tabs input[type=text], select, input[type=text], input[type=text], input[type=number], input[type=submit] {
+  background-color: #fefefe;
+  color: #081f62;
+  padding: 15px;
+  margin: 0 9px 20px 8px;
+  font-size: 17px;
+  border-color: #051747;
+  border-radius: 3%;
+  border-width: 5%;
+  outline: #051747;
+  box-align: left
+}
+
+.formtabs .tabs input[type=text]::placeholder, select, input[type=text]::placeholder, input[type=number]::placeholder, input[type=submit]::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #535f80;
+  opacity: 1; /* Firefox */
+}
+
+.formtabs .tabs input[type=text]:-ms-input-placeholder, select, input[type=text]:-ms-input-placeholder, input[type=number]:-ms-input-placeholder, input[type=submit]:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #535f80;
+}
+
+.formtabs .tabs  input[type=text]::-ms-input-placeholder, select, input[type=text]::-ms-input-placeholder, input[type=number]:-ms-input-placeholder, input[type=submit]:-ms-input-placeholder { /* Microsoft Edge */
+  color: #535f80;
+}
+
+.cddcontent{
+  padding-top: 30px;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  margin-left: 75px;
+}
+
+.cddcontent h1{
+  color: #051747;
+  line-height: 0%;
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+}
