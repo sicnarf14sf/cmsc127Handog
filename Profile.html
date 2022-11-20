@@ -1,93 +1,69 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Profile</title>
-        <link href="css/navbar.css" rel="stylesheet">
-        <link href="css/ldpage.css" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="stylesheet.css">
-        <link href="css/stylesheet2.css" rel="stylesheet">
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
-
-    <body class="body">
+    
+    <body>
         <div id="main_menu">
             <div class="logo_area">
                 <a href="index.html"><img src="assets/handoglogo.png" alt=""></a>
             </div>
             <div class="inner_main_menu">
                 <ul>
-                    <li><a href="index.html">About</a></li>
+                    <li><a href="index.html#about">About</a></li>
                     <li><a href="mainfeed.html">Discover</a></li>
                     <li><a href="cdd.html">Create a Drive</a></li>
                     <li><a href="Profile.html">My Account</a></li>
                     <li><a href="access.html">Log In/Sign Up</a></li>
                 </ul>
             </div>
+            <hr class="navline">
         </div>
 
-        <div class="row">
-            <div class="column1">
-                <h2>Profile</h2>
-                <br>
-                <div class="profile">
-                    <img src="assets/avatar.png" alt="Avatar" class="avatar">
-                    <br>
-                    <div class="information">
-                        <p>Name: Miguel Guillermo</p>
-                        <p>Age: 26</p>
-                        <p>Address: 181 Lorem ipsum dolor sit</p>
-                        <br>
-                    </div>
-                    <div class="text">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo blanditiis rerum quo voluptatibus mollitia corporis perferendis eos, eius ullam ex quas molestiae maxime nihil. Est quisquam cumque numquam accusamus quasi. Lore Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae assumenda maiores, ipsum magni provident iste similique repellendus sequi dolorum distinctio quos, ut eligendi laudantium? Optio sequi commodi architecto ab officia?</p>
-                    </div>
+        <div class="both-rows">
+            <div class="column left-side">
+                <h1>My Profile</h1><br>
+                <div class="profilebox">
+                    <h3>Name: Miguel Guillermo</h3><br>
+                    <h3>Email: mguillermo@gmail.com</h3><br><br>
+                    <h3>About me:</h3><br><br>
+                    <button class="button" style="background-color:darkred">Edit Profile Information</button>
+                    <button class="button" style="background-color:darkred">Log Out</button>
                 </div>
             </div>
-            <div class="column2">
-                <h2>My Donation Drives</h2>
-                <br>
-                <div class="donationDrive">
-                    <img src="assets/myDonation.png" alt="img" class="img1">
-                    <div class="container">
-                        <h4> Donation Drive Name </h4>
-                        <p>Organized by Miguel Guillermo</p>
-                        <p>Php 69,429.00 raised (Php 80,000 goal)</p>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere sunt ipsa itaque aliquam ut velit veritatis consequuntur at tenetur aut asperiores accusamus, earum repellendus sit deserunt fuga. Repellat, libero ratione?</p>
-                        <button type="button" class="button" name="learnMore" >Learn more</button>
-                        <button type="button" class="button" name="Share" >Share</button>
-                        <button type="button" class="button" name="Wrap Up" >Wrap up</button>
-                    </div>
-                </div>
-                <br>
-                <br>
-                <div class="donationDrive">
-                    <img src="assets/myDonation.png" alt="img" class="img1">
-                    <div class="container">
-                        <h4> Donation Drive Name </h4>
-                        <p>Organized by Miguel Guillermo</p>
-                        <p>Php 69,429.00 raised (Php 80,000 goal)</p>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere sunt ipsa itaque aliquam ut velit veritatis consequuntur at tenetur aut asperiores accusamus, earum repellendus sit deserunt fuga. Repellat, libero ratione?</p>
-                        <button type="button" class="button" name="learnMore" >Learn more</button>
-                        <button type="button" class="button" name="Share" >Share</button>
-                        <button type="button" class="button" name="Wrap Up" >Wrap up</button>
-                    </div>
-                </div>
-                <br></br>
-                <h2>Saved Donation Drives</h2>
-                <div class="donationDrive">
-                    <img src="assets/myDonation.png" alt="img" class="img1">
-                    <div class="container">
-                        <h4> Donation Drive Name </h4>
-                        <p>Organized by Miguel Guillermo</p>
-                        <p>Php 69,429.00 raised (Php 80,000 goal)</p>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere sunt ipsa itaque aliquam ut velit veritatis consequuntur at tenetur aut asperiores accusamus, earum repellendus sit deserunt fuga. Repellat, libero ratione?</p>
-                        <button type="button" class="button" name="learnMore" >Learn more</button>
-                        <button type="button" class="button" name="Share" >Share</button>
-                    </div>
-                </div>
-                <br>
+        
+            <div class="column right-side">
+                <h1>My Donation Drives</h1><br>           
+                <div class="profilebox">
+                    <h2>Donation Drive Name</h2>
+                    <p1>Organized by: Miguel Guillermo</p1><br>
+                    <p1>This drive wants to raise Php 80,00</p1><br><br>
+                    <p2>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime velit culpa asperiores dolores ut sunt
+                        ea vero maiores mollitia, architecto obcaecati tempora quae, a at doloremque ratione. Iste officia sint
+                        officiis laborum cupiditate architecto. Voluptates repellat ad, odit accusamus aliquam harum nam.
+                    </p2><br>
+                    <button class="button" name="editdrive">Edit</button>
+                    <button class="button" name="deletedrive">Delete</button>
+                </div><br>
             </div>
         </div>
+        
+        <footer>
+            <div class="footer-content">
+                <img style="max-width: 100px;" src="assets/handoglogo.png" alt="">
+                <p>Reach us through our socials.</p>
+                <ul class="socials">
+                    <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <p>Copyright &copy;2022 Handog.</p>
+            </div>
+        </footer>
     </body>
 </html>         
