@@ -15,7 +15,7 @@
             </div>
             <div class="inner_main_menu">
                 <ul>
-                    <li><a href="index.html">About</a></li>
+                    <li><a href="index.html#about">About</a></li>
                     <li><a href="mainfeed.html">Discover</a></li>
                     <li><a href="cdd.html">Create a Drive</a></li>
                     <li><a href="Profile.html">My Account</a></li>
@@ -24,9 +24,26 @@
             </div>
         </div>
 
-        <form action="creation.php" method="post" class="createform">
+        <div class="content">
+            <h1>Create a Donation Drive</h1>
+            
+        </div>
+        
+        <form method="post" class="createform">
             <br><label>Give your donation drive a name:</label><br>
             <input type="text" name="dname" id="dname" placeholder="Donation Drive Name" required><br>
+            <label>What best describes your drive?</label><br>
+            <select name="categoryID" id="category" required>
+                <option value="">Category</option>
+                <option value="1">Calamity Relief</option>
+                <option value="2">Community</option>
+                <option value="3">Education</option>
+                <option value="4">Animal Welfare</option>
+                <option value="5">Emergencies</option>
+                <option value="6">Funeral & Memorial</option>
+                <option value="7">Medical</option>
+                <option value="8">Other</option>
+            </select><br>
             <label>Tell us about your drive:</label><br>
             <textarea name="description" placeholder="Describe your Donation Drive" required></textarea><br>
             <label>How much are you looking to raise?</label><br>
@@ -36,5 +53,21 @@
             <input type="date" name="dgoal" id="dgoal" required><br>
             <button type="submit" class="button" name="createdrive">Create</button>
         </form>
+
+        <footer>
+            <div class="footer-content">
+                <img style="max-width: 100px;" src="assets/handoglogo.png" alt="">
+                <p>Reach us through our socials.</p>
+                <ul class="socials">
+                    <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <p>Copyright &copy;2022 Handog.</p>
+            </div>
+        </footer>
     </body>
 </html>

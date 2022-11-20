@@ -1,7 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
-/* Header */
+*{
+  box-sizing: border-box;
+}
+
+/* Start of NavBar */
 
 .inner_main_menu{
   margin: 20px auto;
@@ -59,10 +63,9 @@ hr.navline{
   margin-bottom: -1px;
 }
 
-/* End of Header */
+/* End of Nav Bar */
 
-
-/* Index */
+/* Hero Setion */
 
 .hero{
   background: url("assets/landingimage.png");
@@ -94,7 +97,7 @@ hr.navline{
   font-size: 18px;
 }
 
-/* About */
+/* Hero Section End */
 
 .landing h1{
   color:#051747;
@@ -215,10 +218,6 @@ input[type=number] {
     font-size: 16px;
     font-weight: 400;
     text-indent: 50px;
-}
-
-.content .admin{
-  background-color: red;
 }
 
 .button{
@@ -392,7 +391,7 @@ img{
     box-shadow: 0 -5px;
   }
   
-  .accesstabs .tabs input[type=email], input[type=password] {
+  .accesstabs .tabs input[type=email], .tabs input[type=password] {
     background-color: #fefefe;
     color: #081f62;
     padding: 15px;
