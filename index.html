@@ -2,11 +2,10 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="css/navbar.css" rel="stylesheet">
-        <link rel="stylesheet" href="stylesheet.css">
-        <link href="stylesheet2.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="stylesheet3.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
     </head>
+
     <body>
         <div id="main_menu">
             <div class="logo_area">
@@ -14,7 +13,7 @@
             </div>
             <div class="inner_main_menu">
                 <ul>
-                    <li><a href="index.html">About</a></li>
+                    <li><a href="index.html#about">About</a></li>
                     <li><a href="mainfeed.html">Discover</a></li>
                     <li><a href="cdd.html">Create a Drive</a></li>
                     <li><a href="Profile.html">My Account</a></li>
@@ -28,14 +27,14 @@
                 <div class="hero-content">
                     <h1>Magbahagi</h1>
                     <p>Find communities to help, start a donation drive now or donate to one.</p>
-                    <button class="button" name="create" onclick="window.location.href='create.php'">Create a Drive</button> or
-                    <button class="button" name="donate" onclick="window.location.href='discover.php'">Donate</button>
+                    <button class="button" name="create" onclick="window.location.href='cdd.html'">Create a Drive</button> or
+                    <button class="button" name="donate" onclick="window.location.href='mainfeed.html'">Donate</button>
                     
                 </div>
             </div>
         </div>
 
-        <div class="landing">
+        <div class="landing" id="about">
             <h1>About Handog</h1>
             <p>Handog is a Philippine-based fundraising platform that allows Filipinos to raise money by creating a digital donation drive that allows anyone in the world to donate. This platform aims to centralize donation drives in the country and make this act of service easier for Filipinos to initiate donation drives and donate. </p>
     
@@ -58,7 +57,7 @@
             </ul>
         </div>
         <div class="footer-bottom">
-            <p>Copyright &copy;2022 Handog. Created by Daniel Luis Ponsica.</p>
+            <p>Copyright &copy;2022 Handog.</p>
         </div>
 </footer>
 </html>
