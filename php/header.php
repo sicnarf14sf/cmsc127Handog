@@ -25,7 +25,7 @@
 
                     <?php
                         if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
-                            echo '<li><a href="myprofile.php?userid='. $_SESSION['user_ID'] .'">My Account</a></li>';
+                            echo '<li><a href="account.php?userid='. $_SESSION['user_ID'] .'">My Account</a></li>';
                         } 
                         else {
                             echo '<li><a href="access.php">Log In/Sign Up</a></li>';
