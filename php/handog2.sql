@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 20, 2022 at 08:25 PM
+-- Generation Time: Nov 21, 2022 at 10:56 AM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 8.0.6
 
@@ -40,14 +40,15 @@ CREATE TABLE `donationdrives` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `donations`
+-- Table structure for table `donationtable`
 --
 
-CREATE TABLE `donations` (
+CREATE TABLE `donationtable` (
   `donation_ID` int(11) NOT NULL,
   `donation_amount` int(11) NOT NULL,
   `donated_to` int(11) NOT NULL,
-  `donated_by` int(11) NOT NULL
+  `donated_by` int(11) NOT NULL,
+  `message` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -66,13 +67,6 @@ CREATE TABLE `usertable` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `usertable`
---
-
-INSERT INTO `usertable` (`user_ID`, `first_name`, `last_name`, `user_email`, `user_pass`, `about_me`) VALUES
-(4, 'Hello', 'World', 'renz@gmail.com', 'Hello', NULL);
-
---
 -- Indexes for dumped tables
 --
 
@@ -84,9 +78,9 @@ ALTER TABLE `donationdrives`
   ADD KEY `user_ID` (`user_ID`);
 
 --
--- Indexes for table `donations`
+-- Indexes for table `donationtable`
 --
-ALTER TABLE `donations`
+ALTER TABLE `donationtable`
   ADD PRIMARY KEY (`donation_ID`),
   ADD KEY `donated_to` (`donated_to`),
   ADD KEY `donated_by` (`donated_by`);
@@ -105,19 +99,19 @@ ALTER TABLE `usertable`
 -- AUTO_INCREMENT for table `donationdrives`
 --
 ALTER TABLE `donationdrives`
-  MODIFY `drive_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `drive_ID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `donations`
+-- AUTO_INCREMENT for table `donationtable`
 --
-ALTER TABLE `donations`
-  MODIFY `donation_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+ALTER TABLE `donationtable`
+  MODIFY `donation_ID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `usertable`
 --
 ALTER TABLE `usertable`
-  MODIFY `user_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `user_ID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- Constraints for dumped tables
@@ -130,10 +124,10 @@ ALTER TABLE `donationdrives`
   ADD CONSTRAINT `donationdrives_ibfk_1` FOREIGN KEY (`user_ID`) REFERENCES `usertable` (`user_ID`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `donations`
+-- Constraints for table `donationtable`
 --
-ALTER TABLE `donations`
-  ADD CONSTRAINT `donations_ibfk_1` FOREIGN KEY (`donated_to`) REFERENCES `donationdrives` (`drive_ID`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `donationtable`
+  ADD CONSTRAINT `donationtable_ibfk_1` FOREIGN KEY (`donated_to`) REFERENCES `donationdrives` (`drive_ID`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
