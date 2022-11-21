@@ -117,12 +117,11 @@
             }
         ?>
         <?php
-            $sql = " select * from donationdrives where user_ID=$user_ID";
+            $sql = " select * from donationdrives where user_ID=$view_ID";
             $result = mysqli_query($conn, $sql);
             if($result){
                 while($row = mysqli_fetch_assoc($result)){
                     $drive_ID = $row['drive_ID'];
-                    $user_ID = $row['user_ID'];
                     $donation_name = $row['donation_name'];
                     $completion_target = $row['completion_target'];
                     $date_opened = $row['date_opened'];
@@ -135,7 +134,7 @@
                     <p1>This drive wants to raise Php ' . $amount_needed . ' by ' . $completion_target . '</p1><br><br>
                     <p2>Description:<br>' . $description . '</p2><br>';
                         if($user_ID==$view_ID){
-                            echo '<p2> '. $view_ID .'</p>
+                            echo '
                             <button class="button" name="edit_drive" onclick="window.location.href=\'editdrive.php?edit_ID='. $drive_ID .'\'; ">Edit</button>
                             <button class="button" name="deletedrive" onclick="window.location.href=\'deletedrive.php?delete_ID='. $drive_ID .'\'; return confirm(\'This drive is about to be deleted!\')">Delete</button>';
                                 
