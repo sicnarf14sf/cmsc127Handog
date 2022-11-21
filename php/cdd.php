@@ -19,8 +19,7 @@
     <label>Tell us about your drive:</label><br>
     <textarea name="description" placeholder="Describe your Donation Drive" required></textarea><br>
     <label>How much are you looking to raise?</label><br>
-    <label>PHP</label>
-    <input type="number" name="amount_needed" id="amount_needed" placeholder="Donation Drive Goal" required><br>
+    <label>PHP</label> <input type="number" name="amount_needed" id="amount_needed" placeholder="Donation Drive Goal" required><br>
     <label>When do you aim to complete the goal?</label><br>
     <input type="date" name="completion_target" id="date_opened" required><br>
     <button type="submit" class="button" name="createdrive">Create</button> 
