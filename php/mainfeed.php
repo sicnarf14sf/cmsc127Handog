@@ -37,28 +37,32 @@
             $user_ID = $row['user_ID'];
             $first_name = $row['first_name'];
             $last_name = $row['last_name'];
-
-            echo '<div class="discoverpost">
-            <h2>'. $donation_name . '</h2>
-            <p1>Organized by: <a href="account.php?user_ID='. $user_ID . '">'. $first_name . ' ' . $last_name . '</a></p1><br>
-            <p1>This drive wants to raise Php '. $amount_needed. ' by '. $completion_target . '</p1><br><br>
-            <p2>' . $description . '</p2><br>';
             
+
             if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true){
-                if($user_ID==$drive_ID){
-                    echo '<button class="button" name="editdrive" onclick="window.location.href=\'account.php?editredirect\'">Edit</button> <button class="button" name="deletedrive" onclick="window.location.href=\'account.php?deleteredirect\'">Delete</button></div><br>
-                    </div>';
-                }
-                else{
-                    echo '<button class="button" name="donate" onclick="window.location.href=\'donate.php?drive_ID='. $drive_ID . '\'">Donate</button>
-                    </div>';
-                }
+                echo '<div class="discoverpost">
+                <h2>'. $donation_name . '</h2>
+                <p1>Organized by: <a href="account.php?user_ID='. $user_ID . '">'. $first_name . ' ' . $last_name . '</a></p1><br>
+                <p1>This drive wants to raise Php '. $amount_needed. ' by '. $completion_target . '</p1><br><br>
+                <p2>' . $description . '</p2><br>';
+                    if($_SESSION['user_ID']==$user_ID){
+                        echo '<button class="button" name="editdrive" onclick="window.location.href=\'account.php?editredirect\'">Edit</button> <button class="button" name="deletedrive" onclick="window.location.href=\'account.php?deleteredirect\'">Delete</button></div><br>
+                        </div>';
+                    }
+                    else{
+                        echo '<button class="button" name="donate" onclick="window.location.href=\'donate.php?drive_ID='. $drive_ID . '\'">Donate</button>
+                        </div>';
+                    }
             }
             else{
-                echo '<button class="button" name="donate" onclick="window.location.href=\'access.php?noaccount\'">Donate</button>
-                    </div>';
+                echo '<div class="discoverpost">
+                <h2>'. $donation_name . '</h2>
+                <p1>Organized by: <a href="access.php?noaccount" ' . $user_ID . '">'. $first_name . ' ' . $last_name . '</a></p1><br>
+                <p1>This drive wants to raise Php '. $amount_needed. ' by '. $completion_target . '</p1><br><br>
+                <p2>' . $description . '</p2><br>';
+                        echo '<button class="button" name="donate" onclick="window.location.href=\'access.php?noaccount\'">Donate</button>
+                            </div>';
             }
-
         }
     }
 ?>

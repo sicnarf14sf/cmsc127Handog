@@ -3,7 +3,6 @@
     $page = 'account';
     include_once('header.php');
     require_once('connection.php');
-    
     $user_ID = $_SESSION['user_ID'];
     
     if(isset($_GET['deleteredirect'])){
@@ -117,34 +116,36 @@
                 echo '<h1>'. $first_name . '\'s Donation Drives</h1><br>';
             }
         ?>
-            <?php
-                $sql = " select * from donationdrives where user_ID=$view_ID";
-                $result = mysqli_query($conn, $sql);
-                if($result){
-                    while($row = mysqli_fetch_assoc($result)){
-                        $drive_ID = $row['drive_ID'];
-                        $user_ID = $row['user_ID'];
-                        $donation_name = $row['donation_name'];
-                        $completion_target = $row['completion_target'];
-                        $date_opened = $row['date_opened'];
-                        $amount_needed = $row['amount_needed'];
-                        $description = $row['description'];
+        <?php
+            $sql = " select * from donationdrives where user_ID=$user_ID";
+            $result = mysqli_query($conn, $sql);
+            if($result){
+                while($row = mysqli_fetch_assoc($result)){
+                    $drive_ID = $row['drive_ID'];
+                    $user_ID = $row['user_ID'];
+                    $donation_name = $row['donation_name'];
+                    $completion_target = $row['completion_target'];
+                    $date_opened = $row['date_opened'];
+                    $amount_needed = $row['amount_needed'];
+                    $description = $row['description'];
     
-                        echo '<div class="profilebox"><h2>'. $donation_name . '</h2>
-                        <p2>Date Created: '. $date_opened .'</p2><br><br>
-                        <p1>Organized by: '. $first_name . ' ' . $last_name . '</p1><br>
-                        <p1>This drive wants to raise Php ' . $amount_needed . ' by ' . $completion_target . '</p1><br><br>
-                        <p2>Description:<br>' . $description . '</p2><br>';
+                    echo '<div class="profilebox"><h2>'. $donation_name . '</h2>
+                    <p2>Date Created: '. $date_opened .'</p2><br><br>
+                    <p1>Organized by: '. $first_name . ' ' . $last_name . '</p1><br>
+                    <p1>This drive wants to raise Php ' . $amount_needed . ' by ' . $completion_target . '</p1><br><br>
+                    <p2>Description:<br>' . $description . '</p2><br>';
                         if($user_ID==$view_ID){
-                            echo '<button class="button" name="edit_drive" onclick="window.location.href=\'editdrive.php?edit_ID='. $drive_ID .'\'; ">Edit</button>
+                            echo '<p2> '. $view_ID .'</p>
+                            <button class="button" name="edit_drive" onclick="window.location.href=\'editdrive.php?edit_ID='. $drive_ID .'\'; ">Edit</button>
                             <button class="button" name="deletedrive" onclick="window.location.href=\'deletedrive.php?delete_ID='. $drive_ID .'\'; return confirm(\'This drive is about to be deleted!\')">Delete</button>';
+                                
                         }
                         else{
                             echo '<button class="button" name="donate" onclick="window.location.href=\'donate.php?drive_ID='. $drive_ID . '\'">Donate</button>';
                         }
                         echo '</div><br>';
-                    }
                 }
+            }
             ?>
     
     </div>

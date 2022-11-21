@@ -3,7 +3,7 @@
     $page = 'access';
     include_once('header.php');
 
-
+    
     if(isset($_GET['duplicate'])){
         $message = $_GET['duplicate'];
         $message = "There is already an account registered with that email. Please try again.";
