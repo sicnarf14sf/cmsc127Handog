@@ -40,7 +40,7 @@
 
             echo '<div class="discoverpost">
             <h2>'. $donation_name . '</h2>
-            <p1>Organized by: <a href="account.php?userid='. $user_ID . '">'. $first_name . ' ' . $last_name . '</a></p1><br>
+            <p1>Organized by: <a href="account.php?user_ID='. $user_ID . '">'. $first_name . ' ' . $last_name . '</a></p1><br>
             <p1>This drive wants to raise Php '. $amount_needed. ' by '. $completion_target . '</p1><br><br>
             <p2>' . $description . '</p2><br>';
             

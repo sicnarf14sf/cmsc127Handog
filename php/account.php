@@ -71,10 +71,10 @@
         $view_ID = $user_ID;
     }
     else{
-        $view_ID = $user_ID;
+        $view_ID = $_GET['user_ID'];
     }
-
-    $sql = " select * from usertable where user_ID = $view_ID";
+    
+    $sql = " select * from usertable where user_ID=$view_ID";
     $result = mysqli_query($conn, $sql);
     $row = mysqli_fetch_assoc($result);
     $user_email = $row['user_email'];
