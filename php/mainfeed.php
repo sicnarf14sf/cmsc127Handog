@@ -45,7 +45,7 @@
             <p2>' . $description . '</p2><br>';
             
             if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true){
-                if($_SESSION['user_ID']==$user_ID){
+                if($user_ID==$drive_ID){
                     echo '<button class="button" name="editdrive" onclick="window.location.href=\'account.php?editredirect\'">Edit</button> <button class="button" name="deletedrive" onclick="window.location.href=\'account.php?deleteredirect\'">Delete</button></div><br>
                     </div>';
                 }

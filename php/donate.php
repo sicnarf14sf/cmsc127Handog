@@ -17,7 +17,7 @@
     <h1>Donate to <?php echo $donation_name?></h1>
 </div>
 
-<form action="donateFunction.php?drive_ID=<?php echo $drive_ID; ?>" method="post" class="createform">
+<form action="donatefunction.php?drive_ID=<?php echo $drive_ID; ?>" method="post" class="createform">
     <br><label>How much are you going to donate?</label><br>
     <label>PHP</label>
     <input type="number" name="amount" id="amount" placeholder="Amount" required><br>

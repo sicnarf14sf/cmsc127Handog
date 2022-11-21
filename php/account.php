@@ -137,10 +137,10 @@
                         <p2>Description:<br>' . $description . '</p2><br>';
                         if($user_ID==$view_ID){
                             echo '<button class="button" name="edit_drive" onclick="window.location.href=\'editdrive.php?edit_ID='. $drive_ID .'\'; ">Edit</button>
-                            <button class="button" name="deletedrive" onclick="window.location.href=\'deletedrive.php?deleteid='. $drive_ID .'\'; return confirm(\'This drive is about to be deleted!\')">Delete</button>';
+                            <button class="button" name="deletedrive" onclick="window.location.href=\'deletedrive.php?delete_ID='. $drive_ID .'\'; return confirm(\'This drive is about to be deleted!\')">Delete</button>';
                         }
                         else{
-                            echo '<button class="button" name="donate" onclick="window.location.href=\'donate.php?donation_ID='. $drive_ID . '\'">Donate</button>';
+                            echo '<button class="button" name="donate" onclick="window.location.href=\'donate.php?drive_ID='. $drive_ID . '\'">Donate</button>';
                         }
                         echo '</div><br>';
                     }
