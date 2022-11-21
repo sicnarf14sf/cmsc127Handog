@@ -19,7 +19,7 @@ if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true){
     header('location:account.php?drivecreated');
 }
 else{
-    header('location:account.php?invalid');
+    header('location:cdd.php?invalid');
     exit();
 }
 

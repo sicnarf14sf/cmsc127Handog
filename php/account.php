@@ -87,10 +87,10 @@
     <div class="column left-side">
         <?php
             if($user_ID==$view_ID){
-                echo '<h1>My Profile</h1>';
+                echo '<h1>My Profile</h1><br>';
             }
             else{
-                echo '<h1>'. $first_name . '\'s Profile</h1>';
+                echo '<h1>'. $first_name . '\'s Profile</h1><br>';
             }
         ?>
         <div class="profilebox">
@@ -101,7 +101,7 @@
             <?php echo "<h3>About me: ". $about_me . "</h3>" ?><br>
             <?php
                 if($user_ID==$view_ID){
-                    echo '<button class="button" onclick="window.location.href=\'editprofile.php?user_ID='. $user_ID . '\'">Edit Profile Information</button>
+                    echo '<button class="button" onclick="window.location.href=\'editprofile.php?user_ID = '. $user_ID . '\'">Edit Profile Information</button>
                     <button class="button" onclick="window.location.href=\'logout.php\'" style="background-color:darkred">Log Out</button>';
                 }
             ?>
@@ -111,16 +111,14 @@
     <div class="column right-side">
         <?php
             if($user_ID==$view_ID){
-                echo '<h1>My Donation Drives</h1>';
+                echo '<h1>My Donation Drives</h1><br>';
             }
             else{
-                echo '<h1>'. $first_name . '\'s Donation Drives</h1>';
+                echo '<h1>'. $first_name . '\'s Donation Drives</h1><br>';
             }
         ?>
             <?php
-                $sql= "select drives.*
-                from drives
-                where user_ID = $view_ID";
+                $sql = " select * from donationdrives where user_ID = $view_ID";
                 $result = mysqli_query($conn, $sql);
                 if($result){
                     while($row = mysqli_fetch_assoc($result)){
@@ -129,18 +127,20 @@
                         $donation_name = $row['donation_name'];
                         $completion_target = $row['completion_target'];
                         $date_opened = $row['date_opened'];
+                        $amount_needed = $row['amount_needed'];
                         $description = $row['description'];
     
                         echo '<div class="profilebox"><h2>'. $donation_name . '</h2>
-                            <p1>Organized by: '. $first_name . ' ' . $last_name . '</p1><br>
-                        <p1>This drive wants to raise Php ' . $completion_target . ' by ' . $date_opened . '</p1><br><br>
-                        <p2>' . $description . '</p2><br>';
+                        <p2>Date Created: '. $date_opened .'</p2><br><br>
+                        <p1>Organized by: '. $first_name . ' ' . $last_name . '</p1><br>
+                        <p1>This drive wants to raise Php ' . $amount_needed . ' by ' . $completion_target . '</p1><br><br>
+                        <p2>Description:<br>' . $description . '</p2><br>';
                         if($user_ID==$view_ID){
-                            echo '<button class="button" name="editdrive" onclick="window.location.href=\'editdrive.php?editid='. $donation_ID .'\'; ">Edit</button>
-                            <button class="button" name="deletedrive" onclick="window.location.href=\'deletedrive.php?deleteid='. $donation_ID .'\'; return confirm(\'This drive is about to be deleted!\')">Delete</button>';
+                            echo '<button class="button" name="editdrive" onclick="window.location.href=\'editdrive.php?editid='. $drive_ID .'\'; ">Edit</button>
+                            <button class="button" name="deletedrive" onclick="window.location.href=\'deletedrive.php?deleteid='. $drive_ID .'\'; return confirm(\'This drive is about to be deleted!\')">Delete</button>';
                         }
                         else{
-                            echo '<button class="button" name="donate" onclick="window.location.href=\'donate.php?donation_ID='. $donation_ID . '\'">Donate</button>';
+                            echo '<button class="button" name="donate" onclick="window.location.href=\'donate.php?donation_ID='. $drive_ID . '\'">Donate</button>';
                         }
                         echo '</div><br>';
                     }
