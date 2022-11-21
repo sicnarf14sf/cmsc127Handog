@@ -136,7 +136,7 @@
                         <p1>This drive wants to raise Php ' . $amount_needed . ' by ' . $completion_target . '</p1><br><br>
                         <p2>Description:<br>' . $description . '</p2><br>';
                         if($user_ID==$view_ID){
-                            echo '<button class="button" name="editdrive" onclick="window.location.href=\'editdrive.php?editid='. $drive_ID .'\'; ">Edit</button>
+                            echo '<button class="button" name="edit_drive" onclick="window.location.href=\'editdrive.php?edit_ID='. $drive_ID .'\'; ">Edit</button>
                             <button class="button" name="deletedrive" onclick="window.location.href=\'deletedrive.php?deleteid='. $drive_ID .'\'; return confirm(\'This drive is about to be deleted!\')">Delete</button>';
                         }
                         else{

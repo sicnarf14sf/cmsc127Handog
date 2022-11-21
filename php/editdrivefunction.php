@@ -10,7 +10,7 @@
     $completion_target = mysqli_real_escape_string($conn, $_POST['completion_target']);
     $amount_needed = mysqli_real_escape_string($conn, $_POST['amount_needed']);
 
-    $sql = "update drives
+    $sql = "update donationdrives
     set donation_name='$donation_name', description='$description', completion_target='$completion_target', amount_needed='$amount_needed'
     where drive_ID = $drive_ID";
 
@@ -20,7 +20,7 @@
         exit();
         }
         else{
-            die(mysqli_error($con));
+            die(mysqli_error($conn));
     }
 
 
