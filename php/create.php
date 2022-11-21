@@ -13,13 +13,13 @@ if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true){
     
     $user_ID = $_SESSION['user_ID'];
     
-    $reg = " insert into drives(donation_name, description, completion_target, date_opened, user_ID) 
+    $reg = "insert into drives(donation_name, description, completion_target, date_opened, user_ID) 
     values ('$donation_name', '$description', '$completion_target', '$date_opened', '$user_ID')";
-    mysqli_query($con, $reg);
+    mysqli_query($conn, $reg);
     header('location:account.php?drivecreated');
 }
 else{
-    header('location:cdd.php?invalid');
+    header('location:account.php?invalid');
     exit();
 }
 

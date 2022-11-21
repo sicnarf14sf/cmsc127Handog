@@ -5,7 +5,6 @@
     require_once('connection.php');
     
     $user_ID = $_SESSION['user_ID'];
-    $u = " select * from usertable where user_ID = '$user_ID'";
     
     if(isset($_GET['deleteredirect'])){
         $message = $_GET['deleteredirect'];
@@ -75,7 +74,7 @@
         $view_ID = $user_ID;
     }
 
-    $sql = $u;
+    $sql = " select * from usertable where user_ID = $view_ID";
     $result = mysqli_query($conn, $sql);
     $row = mysqli_fetch_assoc($result);
     $user_email = $row['user_email'];

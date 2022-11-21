@@ -1,3 +1,5 @@
+    </body>
+    
     <footer>
         <div class="footer-content">
             <img style="max-width: 100px;" src="assets/handoglogo.png" alt="">
@@ -13,6 +15,4 @@
             <p>Copyright &copy;2022 Handog.</p>
         </div>
     </footer>
-
-    </body>
 </html>
