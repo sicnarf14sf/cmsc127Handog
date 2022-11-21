@@ -27,10 +27,7 @@
 
 ?>
 
-<div class="content">
-    <h1>Edit your profile</h1>
-</div>
-
+<div class="content"><h1>Edit your profile</h1></div>
 <form action="edituserfunction.php?user_ID=<?php echo $user_ID ?>" method="post" class="createform">
     <br><label>First Name: </label><br>
     <input type="text" name="first_name" id="first_name" value="<?php echo $first_name;?>" required><br>
@@ -54,3 +51,4 @@
 </div>
 
 <?php include_once('footer.php')?>
+

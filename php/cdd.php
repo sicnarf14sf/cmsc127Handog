@@ -8,11 +8,7 @@
     }
 ?>
 
-<div class="content">
-    <h1>Create a Donation Drive</h1>
-    
-</div>
-
+<div class="content"><h1>Create a Donation Drive</h1></div>
 <form action="create.php" method="post" class="createform">
     <br><label>Give your donation drive a name:</label><br>
     <input type="text" name="donation_name" id="donation_name" placeholder="Donation Drive Name" required><br>
@@ -38,3 +34,4 @@
 
 
 <?php include_once('footer.php')?>
+

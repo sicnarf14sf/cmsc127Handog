@@ -16,9 +16,7 @@
 
 ?>
 
-<div class="content">
-    <h1>Edit Your Drive: </h1>
-</div>
+<div class="content"><h1>Edit Your Drive: </h1></div>
 
 <form action="editdrivefunction.php?drive_ID=<?php echo $drive_ID ?>" method="post" class="createform">
     <br><label>Donation Drive Name: </label><br>
@@ -32,11 +30,10 @@
     <input type="date" name="completion_target" id="completion_target" value="<?php echo $completion_target ?>" required><br>
     <button type="submit" class="button" name="createdrive">Save Changes</button>
 </form>
+
 <div style="margin-left: 110px">
-    <?php
-        echo '<button class="button" name="cancel" onclick="window.location.href=\'account.php?cancel\'">Cancel</button><br>';
-    ?>
+    <?php echo '<button class="button" name="cancel" onclick="window.location.href=\'account.php?cancel\'">Cancel</button><br>'; ?>
 </div>
 
-
 <?php include_once('footer.php')?>
+

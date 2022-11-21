@@ -10,6 +10,5 @@
         header("location:logout.php");
         exit();
     }
-
-
 ?>
+

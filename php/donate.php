@@ -10,13 +10,9 @@
     
     $title = 'Handog | Donate to ' . $donation_name;
     include_once('header.php');
-
 ?>
 
-<div class="content">
-    <h1>Donate to <?php echo $donation_name?></h1>
-</div>
-
+<div class="content"><h1>Donate to <?php echo $donation_name?></h1></div>
 <form action="donatefunction.php?drive_ID=<?php echo $drive_ID; ?>" method="post" class="createform">
     <br><label>How much are you going to donate?</label><br>
     <label>PHP</label>
@@ -25,4 +21,6 @@
     <textarea name="message" placeholder="Any kind words are welcome! You may leave this part empty."></textarea><br>
     <button type="submit" class="button" name="donate">Donate</button>
 </form>
+
 <?php include_once('footer.php')?>
+

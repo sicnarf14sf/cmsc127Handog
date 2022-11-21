@@ -19,10 +19,6 @@
         header('location:account.php?driveupdated');
         exit();
         }
-        else{
-            die(mysqli_error($conn));
-    }
-
-
-
+        else {die(mysqli_error($conn));}
 ?>
+

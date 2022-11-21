@@ -9,15 +9,13 @@
         $message = "Thank you for donating! Browse for more drives here.";
 
     ?>
-            <label style="color: darkgreen; display:block; text-align:center; font-weight:bolder; margin-top: 50px">
-            <?php echo $message?></label>
+        <label style="color: darkgreen; display:block; text-align:center; font-weight:bolder; margin-top: 50px">
+        <?php echo $message?></label>
     <?php
     }
 ?>
 
-<div class="content">
-    <h1>Discover Donation Drives</h1>
-</div>
+<div class="content"><h1>Discover Donation Drives</h1></div>
 
 <?php
     $sql = "
@@ -60,12 +58,12 @@
                 <p1>Organized by: <a href="access.php?noaccount" ' . $user_ID . '">'. $first_name . ' ' . $last_name . '</a></p1><br>
                 <p1>This drive wants to raise Php '. $amount_needed. ' by '. $completion_target . '</p1><br><br>
                 <p2>' . $description . '</p2><br>';
-                        echo '<button class="button" name="donate" onclick="window.location.href=\'access.php?noaccount\'">Donate</button>
-                            </div>';
+                echo '<button class="button" name="donate" onclick="window.location.href=\'access.php?noaccount\'">Donate</button>
+                </div>';
             }
         }
     }
 ?>
 
-
 <?php include_once('footer.php')?>
+

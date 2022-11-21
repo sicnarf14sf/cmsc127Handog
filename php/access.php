@@ -3,7 +3,7 @@
     $page = 'access';
     include_once('header.php');
 
-    
+    // if user has duplicate
     if(isset($_GET['duplicate'])){
         $message = $_GET['duplicate'];
         $message = "There is already an account registered with that email. Please try again.";
@@ -14,6 +14,7 @@
         <?php
     }
 
+    // if user completes to sign-up to the page
     if(isset($_GET['success'])){
         $message = $_GET['success'];
         $message = "You have successfully registered. You may now log in.";
@@ -24,6 +25,7 @@
     <?php
     }
 
+    // if there were invalid input during log-in
     if(isset($_GET['invalid'])){
         $message = $_GET['invalid'];
         $message = "Email or password is incorrect. No account? Sign up instead.";
@@ -34,6 +36,7 @@
     <?php
     }
 
+    // checks if inputted account is in the system
     if(isset($_GET['noaccount'])){
         $message = $_GET['noaccount'];
         $message = "Please log in first. No account? Sign up instead.";
@@ -43,6 +46,7 @@
     <?php
     }
 
+    // checks if password is error
     if(isset($_GET['passworderror'])){
         $message = $_GET['passworderror'];
         $message = "Passwords did not match, please try again.";
@@ -54,7 +58,9 @@
     }
 ?>
 
+
 <div class="accesstabs">
+    <!-- log-in -->
     <input type="radio" id="login" name="accesstabs" checked="checked">
     <label for="login">Log In</label>
     <div class="tabs">
@@ -66,6 +72,7 @@
         </form>
     </div>
 
+    <!-- Sign-up -->
     <input type="radio" id="signup" name="accesstabs">
     <label for="signup">Sign Up</label>
     <div class="tabs">
@@ -81,3 +88,4 @@
 </div>
 
 <?php include_once('footer.php')?>
+

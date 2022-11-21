@@ -36,6 +36,5 @@
             header('location:editprofile.php?passworderror');
             exit();
         }
-
-
 ?>
+
