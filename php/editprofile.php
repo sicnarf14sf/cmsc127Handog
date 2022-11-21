@@ -6,7 +6,7 @@
 
     $user_ID = $_GET['user_ID'];
     
-    $sql = "select from usertable where user_ID = $user_ID";
+    $sql = "select * from usertable where user_ID=$user_ID";
     $result = mysqli_query($conn, $sql);
     $row = mysqli_fetch_assoc($result);
     $user_email = $row['user_email'];
@@ -33,19 +33,18 @@
 
 <form action="edituserfunction.php?user_ID=<?php echo $user_ID ?>" method="post" class="createform">
     <br><label>First Name: </label><br>
-    <input type="text" name="first_name" id="first_name" value="<?php echo $first_name ;?>" required><br>
+    <input type="text" name="first_name" id="first_name" value="<?php echo $first_name;?>" required><br>
     <label>Last Name: </label><br>
-    <input type="text" name="last_name" id="last_name" value="<?php echo $last_name ;?>" required><br>
+    <input type="text" name="last_name" id="last_name" value="<?php echo $last_name;?>" required><br>
     <label>Describe yourself: </label><br>
     <textarea name="about_me"><?php echo $about_me ;?></textarea><br>
     <label>Email address: </label><br>
-    <input type="email" name="user_email" id="user_email" value="<?php echo $user_email ;?>" required><br>
+    <input type="email" name="user_email" id="user_email" value="<?php echo $user_email;?>" required><br>
     <label>Password: </label><br>
-    <input type="password" name="user_pass" id="user_pass" value="<?php echo $user_pass ;?>" required><br>
+    <input type="password" name="user_pass" id="user_pass" value="<?php echo $user_pass;?>" required><br>
     <label>Confirm Password: </label><br>
-    <input type="password" name="confirm_pass" id="confirm_pass" value="<?php echo $user_pass ;?>" required><br>
+    <input type="password" name="confirm_pass" id="confirm_pass" value="<?php echo $user_pass;?>" required><br>
     <button type="submit" class="button" name="editprofile">Save Changes</button>
-    
 </form>
 <div style="margin-left: 110px">
     <?php

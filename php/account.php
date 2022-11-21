@@ -101,7 +101,7 @@
             <?php echo "<h3>About me: ". $about_me . "</h3>" ?><br>
             <?php
                 if($user_ID==$view_ID){
-                    echo '<button class="button" onclick="window.location.href=\'editprofile.php?user_ID = '. $user_ID . '\'">Edit Profile Information</button>
+                    echo '<button class="button" onclick="window.location.href=\'editprofile.php?user_ID='.$user_ID.'\'">Edit Profile Information</button>
                     <button class="button" onclick="window.location.href=\'logout.php\'" style="background-color:darkred">Log Out</button>';
                 }
             ?>
@@ -118,7 +118,7 @@
             }
         ?>
             <?php
-                $sql = " select * from donationdrives where user_ID = $view_ID";
+                $sql = " select * from donationdrives where user_ID=$view_ID";
                 $result = mysqli_query($conn, $sql);
                 if($result){
                     while($row = mysqli_fetch_assoc($result)){
