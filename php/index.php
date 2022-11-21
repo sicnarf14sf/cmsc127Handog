@@ -12,7 +12,7 @@
             <h1>Magbahagi</h1>
             <p>Find communities to help, start a donation drive now or donate to one.</p>
             <button class="button" name="create" onclick="window.location.href='create.php'">Create a Drive</button> or
-            <button class="button" name="donate" onclick="window.location.href='discover.php'">Donate</button>
+            <button class="button" name="donate" onclick="window.location.href='mainfeed.php'">Donate</button>
             
         </div>
     </div>
